@@ -61,21 +61,14 @@ namespace Zongsoft.Externals.Redis
 						return new RedisService(key, RedisServiceSettings.Parse(setting.Value));
 				}
 
-				throw new KeyNotFoundException($"The Redis service with the specified name '{key}' is undefined.");
+				return null;
 			});
 		}
 		#endregion
 
 		#region 显式实现
-		ICache IServiceProvider<ICache>.GetService(string name)
-		{
-			return this.GetRedis(name);
-		}
-
-		ISequence IServiceProvider<ISequence>.GetService(string name)
-		{
-			return this.GetRedis(name);
-		}
+		ICache IServiceProvider<ICache>.GetService(string name) => this.GetRedis(name);
+		ISequence IServiceProvider<ISequence>.GetService(string name) => this.GetRedis(name);
 		#endregion
 	}
 }
