@@ -27,7 +27,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Folder Include="Common\" />
 		<Folder Include="ComponentModel\" />
 		<Folder Include="Configuration\Profiles\" />
 		<Folder Include="Expressions\Tokenization\" />
@@ -36,7 +35,6 @@
 		<Folder Include="Services\Commands\" />
 		<Folder Include="Terminals\Commands\" />
 		<Folder Include="Transactions\" />
-		<Folder Include="Text\" />
 	</ItemGroup>
 
 	<ItemGroup>
